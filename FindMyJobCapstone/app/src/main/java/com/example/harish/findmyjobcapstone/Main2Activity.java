@@ -1,4 +1,4 @@
-package com.example.harish.findmyjobcapstone;
+package com.example.kavya.findmyjob123;
 
 import android.arch.lifecycle.Observer;
 import android.arch.lifecycle.ViewModelProviders;
@@ -25,9 +25,9 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
-import com.example.harish.findmyjobcapstone.SaveJobsData.AppDatabase;
-import com.example.harish.findmyjobcapstone.SaveJobsData.JobViewModel;
-import com.example.harish.findmyjobcapstone.SaveJobsData.SaveJobData;
+import com.example.kavya.findmyjob123.SaveJobsData.AppDatabase;
+import com.example.kavya.findmyjob123.SaveJobsData.JobViewModel;
+import com.example.kavya.findmyjob123.SaveJobsData.SaveJobData;
 import com.google.firebase.auth.FirebaseAuth;
 
 import org.json.JSONArray;

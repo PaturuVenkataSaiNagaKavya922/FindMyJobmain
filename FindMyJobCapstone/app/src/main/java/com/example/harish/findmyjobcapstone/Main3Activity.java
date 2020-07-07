@@ -1,4 +1,4 @@
-package com.example.harish.findmyjobcapstone;
+package com.example.kavya.findmyjob123;
 
 import android.arch.lifecycle.Observer;
 import android.arch.lifecycle.ViewModelProviders;
@@ -9,8 +9,8 @@ import android.text.Html;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.example.harish.findmyjobcapstone.SaveJobsData.JobViewModel;
-import com.example.harish.findmyjobcapstone.SaveJobsData.SaveJobData;
+import com.example.kavya.findmyjob123.SaveJobsData.JobViewModel;
+import com.example.kavya.findmyjob123.SaveJobsData.SaveJobData;
 import com.like.LikeButton;
 import com.like.OnLikeListener;
 import com.squareup.picasso.Picasso;

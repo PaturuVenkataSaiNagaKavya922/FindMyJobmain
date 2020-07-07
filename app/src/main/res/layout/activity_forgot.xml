@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ForgotActivity">
+
+
+
+    <EditText
+            android:id="@+id/fgp"
+            android:layout_width="207dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="100dp"
+            android:layout_marginRight="100dp"
+            android:background="@drawable/bg_btn"
+            android:text="FORGOT"
+            android:textColor="#1F1F1F"
+            android:textSize="50sp"
+            android:textStyle="bold" />
+
+    <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textEmailAddress"
+            android:hint="Email_Id"
+            android:textSize="25sp"
+            android:id="@+id/email"  />
+
+    <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPassword"
+            android:hint="ResetPassword"
+            android:textSize="25sp"
+            android:id="@+id/rpwd"  />
+    <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textAutoCorrect"
+            android:hint="ConfirmPassword"
+            android:textSize="25sp"
+            android:id="@+id/cpwd"  />
+    <Button
+            android:layout_width="152dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:onClick="reset"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/bg_btn"
+            android:text="Reset" />
+    <Button
+            android:layout_width="152dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:onClick="goback"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/bg_btn"
+            android:text="Go_Back" />
+
+
+
+</LinearLayout>

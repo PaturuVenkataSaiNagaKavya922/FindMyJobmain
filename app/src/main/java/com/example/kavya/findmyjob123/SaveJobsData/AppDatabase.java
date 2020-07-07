@@ -1,14 +1,14 @@
-package com.example.harish.findmyjobcapstone.SaveJobsData;
+package com.example.kavya.findmyjob123.SaveJobsData;
 
 import android.arch.persistence.room.Database;
 import android.arch.persistence.room.Room;
 import android.arch.persistence.room.RoomDatabase;
 import android.content.Context;
 
-import com.example.harish.findmyjobcapstone.R;
+import com.example.kavya.findmyjob123.R;
 
 @Database(entities = {SaveJobData.class}, version = 1, exportSchema = false)
-public abstract class AppDatabase extends RoomDatabase {
+public abstract class  AppDatabase extends RoomDatabase {
     private static volatile AppDatabase INSTANCE;
 
     static AppDatabase getDatabase(final Context context) {

@@ -1,4 +1,4 @@
-package com.example.harish.findmyjobcapstone.SaveJobsData;
+package com.example.kavya.findmyjob123.SaveJobsData;
 
 import android.arch.persistence.room.Entity;
 import android.arch.persistence.room.PrimaryKey;

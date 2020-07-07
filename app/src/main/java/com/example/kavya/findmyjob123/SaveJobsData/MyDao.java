@@ -1,4 +1,4 @@
-package com.example.harish.findmyjobcapstone.SaveJobsData;
+package com.example.kavya.findmyjob123.SaveJobsData;
 
 import android.arch.lifecycle.LiveData;
 import android.arch.persistence.room.Dao;

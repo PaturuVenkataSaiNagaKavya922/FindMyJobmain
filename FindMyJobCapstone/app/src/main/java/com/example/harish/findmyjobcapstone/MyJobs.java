@@ -1,4 +1,4 @@
-package com.example.harish.findmyjobcapstone;
+package com.example.kavya.findmyjob123;
 
 public class MyJobs {
     String id, type, url, created_at, company, companyurl, location, company_logo, how_to_apply, description, title;

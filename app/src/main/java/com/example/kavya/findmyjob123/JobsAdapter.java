@@ -1,4 +1,4 @@
-package com.example.harish.findmyjobcapstone;
+package com.example.kavya.findmyjob123;
 
 import android.content.Context;
 import android.content.Intent;
@@ -8,7 +8,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-import com.example.harish.findmyjobcapstone.SaveJobsData.SaveJobData;
+import com.example.kavya.findmyjob123.SaveJobsData.SaveJobData;
 import com.squareup.picasso.Picasso;
 
 import java.util.List;

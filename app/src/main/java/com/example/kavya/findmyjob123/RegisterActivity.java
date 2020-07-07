@@ -1,11 +1,10 @@
-package com.example.harish.findmyjobcapstone;
+package com.example.kavya.findmyjob123;
 
 import android.app.ProgressDialog;
 import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -16,13 +15,17 @@ import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 
 public class RegisterActivity extends AppCompatActivity {
 
     Button reg;
-    EditText name, pass;
+    EditText name1,mobno,email, pass;
     ProgressDialog progressDialog;
     private FirebaseAuth mAuthe;
+    DatabaseReference reference;
+
 
     /*Button signin;*/
 
@@ -31,10 +34,13 @@ public class RegisterActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register);
         reg=findViewById(R.id.reg);
-        name=findViewById(R.id.et1);
+        name1=findViewById(R.id.name);
+        mobno=findViewById(R.id.mobile);
+        email=findViewById(R.id.et1);
         pass=findViewById(R.id.et2);
         mAuthe = FirebaseAuth.getInstance();
         progressDialog=new ProgressDialog(this);
+        reference= FirebaseDatabase.getInstance().getReference("job");
 
 
 
@@ -42,15 +48,20 @@ public class RegisterActivity extends AppCompatActivity {
             @Override
             public void onClick(View view)
             {
-                String email = name.getText().toString();
-                String password = pass.getText().toString();
-                if (TextUtils.isEmpty(email) || TextUtils.isEmpty(password))
+                String name=name1.getText().toString();
+                String mobile=mobno.getText().toString();
+                String et1 =email.getText().toString();
+                String et2= pass.getText().toString();
+                String id=reference.push().getKey();
+                User user=new User(name,mobile,et1,et2);
+                reference.child(id).setValue(user);
+                if (et1.isEmpty() ||et2 .isEmpty()|| mobile.isEmpty()|| name.isEmpty())
                 {
                     Toast.makeText(RegisterActivity.this, "enter a mail id", Toast.LENGTH_LONG).show();
                 } else {
                     progressDialog.setMessage("SigningUp...");
                     progressDialog.show();
-                    mAuthe.createUserWithEmailAndPassword(email, password)
+                    mAuthe.createUserWithEmailAndPassword(et1, et2)
                             .addOnCompleteListener(RegisterActivity.this, new OnCompleteListener<AuthResult>()
                             {
                                 @Override
@@ -58,7 +69,7 @@ public class RegisterActivity extends AppCompatActivity {
                                     if (task.isSuccessful()) {
                                         FirebaseUser user = mAuthe.getCurrentUser();
                                         progressDialog.dismiss();
-                                        Toast.makeText(RegisterActivity.this, "sucess", Toast.LENGTH_SHORT).show();
+                                        Toast.makeText(RegisterActivity.this, "Success", Toast.LENGTH_SHORT).show();
 
                                         startActivity(new Intent(RegisterActivity.this,MainActivity.class));
 
@@ -67,7 +78,8 @@ public class RegisterActivity extends AppCompatActivity {
                                     } else
                                     {
                                         progressDialog.dismiss();
-                                        Toast.makeText(getApplicationContext(), task.getException().getLocalizedMessage(), Toast.LENGTH_SHORT).show();
+                                        //Toast.makeText(getApplicationContext(), task.getException().getLocalizedMessage(), Toast.LENGTH_SHORT).show();
+                                        Toast.makeText(RegisterActivity.this, "Failed", Toast.LENGTH_SHORT).show();
                                     }
                                 }
                             });

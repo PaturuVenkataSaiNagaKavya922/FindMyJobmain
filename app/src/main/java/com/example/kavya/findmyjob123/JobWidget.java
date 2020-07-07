@@ -1,4 +1,4 @@
-package com.example.harish.findmyjobcapstone;
+package com.example.kavya.findmyjob123;
 
 import android.app.PendingIntent;
 import android.appwidget.AppWidgetManager;

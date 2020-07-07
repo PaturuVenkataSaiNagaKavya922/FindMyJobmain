@@ -11,13 +11,13 @@
         android:layout_height="wrap_content"
         android:id="@+id/fragment_container"
         >
-        <com.example.harish.findmyjobcapstone.StatefullRecyclerview
+        <com.example.kavya.findmyjob123.StatefullRecyclerview
             android:id="@+id/rec"
             android:layoutAnimation="@anim/layout_animate_from_bottom"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
-        </com.example.harish.findmyjobcapstone.StatefullRecyclerview>
+        </com.example.kavya.findmyjob123.StatefullRecyclerview>
     </FrameLayout>
 
     <android.support.design.widget.NavigationView

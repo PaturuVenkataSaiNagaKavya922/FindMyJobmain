@@ -1,21 +1,17 @@
-package com.example.harish.findmyjobcapstone;
+package com.example.kavya.findmyjob123.SaveJobsData;
 
-public class MyJobs {
-    String id, type, url, created_at, company, companyurl, location, company_logo, how_to_apply, description, title;
+import android.arch.persistence.room.Entity;
+import android.arch.persistence.room.PrimaryKey;
+import android.support.annotation.NonNull;
 
-    public MyJobs(String id, String type, String url, String created_at, String company, String companyurl, String location, String company_logo, String how_to_apply, String description, String title) {
-        this.id = id;
-        this.type = type;
-        this.url = url;
-        this.created_at = created_at;
-        this.company = company;
-        this.companyurl = companyurl;
-        this.location = location;
-        this.company_logo = company_logo;
-        this.how_to_apply = how_to_apply;
-        this.description = description;
-        this.title = title;
-    }
+
+@Entity(tableName = "savedjobs")
+public class SaveJobData {
+    @PrimaryKey
+    @NonNull
+    private String id;
+    private String type, url, created_at, company, companyurl, location, company_logo, how_to_apply, description, title;
+
 
     public String getId() {
         return id;
@@ -104,5 +100,6 @@ public class MyJobs {
     public void setTitle(String title) {
         this.title = title;
     }
+
 
 }

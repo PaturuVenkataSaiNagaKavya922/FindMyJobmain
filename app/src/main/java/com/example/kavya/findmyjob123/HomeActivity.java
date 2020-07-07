@@ -1,6 +1,5 @@
-package com.example.harish.findmyjobcapstone;
+package com.example.kavya.findmyjob123;
 
-import android.app.Activity;
 import android.app.ActivityOptions;
 import android.content.Intent;
 import android.os.Handler;

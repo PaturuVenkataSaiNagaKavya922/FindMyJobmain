@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.harish.findmyjobcapstone">
+    package="com.example.kavya.findmyjob123">
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
@@ -12,7 +12,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".HomeActivity"
+        <activity android:name=".ForgotActivity"></activity>
+        <activity
+            android:name=".HomeActivity"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -27,9 +29,7 @@
             android:name="com.google.android.gms.ads.APPLICATION_ID"
             android:value="@string/app_id" />
 
-        <activity android:name=".MainActivity">
-
-        </activity>
+        <activity android:name=".MainActivity"></activity>
         <activity android:name=".Main2Activity" />
         <activity
             android:name=".Main3Activity"

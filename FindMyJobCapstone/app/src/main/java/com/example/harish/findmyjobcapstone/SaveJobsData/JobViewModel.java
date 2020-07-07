@@ -1,4 +1,4 @@
-package com.example.harish.findmyjobcapstone.SaveJobsData;
+package com.example.kavya.findmyjob123.SaveJobsData;
 
 import android.app.Application;
 import android.arch.lifecycle.AndroidViewModel;

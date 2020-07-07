@@ -1,17 +1,14 @@
-package com.example.harish.findmyjobcapstone;
+package com.example.kavya.findmyjob123;
 
 import android.app.ProgressDialog;
 import android.content.Context;
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
-import android.net.Uri;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
-import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.text.TextUtils;
 import android.view.View;
@@ -20,9 +17,6 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.google.android.gms.ads.AdRequest;
-import com.google.android.gms.ads.AdSize;
-import com.google.android.gms.ads.AdView;
 import com.google.android.gms.auth.api.signin.GoogleSignIn;
 import com.google.android.gms.auth.api.signin.GoogleSignInAccount;
 import com.google.android.gms.auth.api.signin.GoogleSignInClient;
@@ -36,13 +30,9 @@ import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.auth.GoogleAuthProvider;
-import com.google.firebase.database.DataSnapshot;
-import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
-import com.google.firebase.database.ValueEventListener;
 
-import java.util.ArrayList;
 import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
@@ -108,7 +98,7 @@ public class MainActivity extends AppCompatActivity {
 
                                             FirebaseUser user = mAuthe.getCurrentUser();
                                             progressDialog.dismiss();
-                                            Toast.makeText(MainActivity.this,"login sucess", Toast.LENGTH_SHORT).show();
+                                            Toast.makeText(MainActivity.this,"Login Success", Toast.LENGTH_SHORT).show();
                                             startActivity(new Intent(MainActivity.this, Main2Activity.class));
                                             //finish();
                                         } else {
@@ -195,7 +185,7 @@ public class MainActivity extends AppCompatActivity {
 
         }
         catch (ApiException e){
-            Toast.makeText(MainActivity.this,"Sign In Failed",Toast.LENGTH_SHORT).show();
+            Toast.makeText(MainActivity.this,"Signed In Failed",Toast.LENGTH_SHORT).show();
             FirebaseGoogleAuth(null);
         }
     }
@@ -255,8 +245,8 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void forgotpass(View view) {
-        /*Intent i=new Intent(this,ForgotActivity.class);
-        startActivity(i);*/
+         Intent i=new Intent(this,ForgotActivity.class);
+        startActivity(i);
     }
 
 

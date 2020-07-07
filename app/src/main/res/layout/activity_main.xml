@@ -9,7 +9,6 @@
     tools:context=".MainActivity">
 
 
-
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -17,11 +16,12 @@
         android:background="@drawable/bgcard"
         android:orientation="vertical"
         android:padding="40dp">
+
         <ImageView
             android:layout_width="150dp"
-            android:layout_height="150dp"
-            android:transitionName="imgtra"
-            android:src="@drawable/job_search_remotive_home"/>
+            android:layout_height="62dp"
+            android:src="@drawable/job_search_remotive_home"
+            android:transitionName="imgtra" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -30,69 +30,66 @@
             android:text="Find My job"
             android:textColor="#0F0F0F"
             android:textSize="34dp"
-            android:transitionName="texttra"/>
+            android:transitionName="texttra" />
 
 
         <EditText
             android:id="@+id/remail"
             android:layout_width="match_parent"
-            android:layout_height="48dp"
-            android:layout_marginTop="42dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="32dp"
             android:background="@drawable/bg_editext"
             android:hint="E-mail"
-            android:paddingLeft="18dp"
             android:inputType="textEmailAddress"
-            />
+            android:paddingLeft="18dp" />
 
         <EditText
             android:id="@+id/rpass"
             android:layout_width="match_parent"
-            android:layout_height="48dp"
-            android:layout_marginTop="14dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="10dp"
             android:background="@drawable/bg_editext"
             android:hint="Password"
-            android:paddingLeft="18dp"
-            android:inputType="textPassword"/>
+            android:inputType="textPassword"
+            android:paddingLeft="18dp" />
 
         <Button
+            android:id="@+id/signin"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="32dp"
+            android:layout_marginTop="22dp"
             android:background="@drawable/bg_btn"
-            android:id="@+id/signin"
-            android:textColor="#1A1919"
             android:text="login"
-            android:textSize="16dp" />
+            android:textColor="#1A1919"
+            android:textSize="16sp" />
 
         <com.google.android.gms.common.SignInButton
             android:id="@+id/sign_in_button"
-            android:layout_marginTop="20dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            />
-
-
+            android:layout_marginTop="10dp" />
 
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="14dp"
+            android:layout_marginTop="0dp"
             android:layout_marginBottom="28dp"
-            android:paddingTop="20dp"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:paddingTop="20dp">
 
             <TextView
                 android:id="@+id/createacc"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:paddingVertical="15dp"
                 android:fontFamily="@font/quicksand_book"
+                android:onClick="create"
+                android:paddingVertical="10dp"
                 android:text="Create Account"
                 android:textColor="#363636"
-                android:textSize="16dp"
-                android:onClick="create"/>
+                android:background="@drawable/bg_btn"
+                android:textSize="16dp" />
 
             <TextView
                 android:id="@+id/forgotpassword"
@@ -100,19 +97,19 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_marginLeft="4dp"
+                android:layout_marginTop="2dp"
                 android:fontFamily="@font/quicksand_book"
+                android:onClick="forgotpass"
+                android:paddingVertical="10dp"
                 android:text="Forgot Password"
                 android:textColor="#1F1F1F"
-                android:textSize="16dp"
-                android:paddingVertical="15dp"
-                android:onClick="forgotpass"/>
+                android:background="@drawable/bg_btn"
+                android:textSize="16sp" />
 
         </LinearLayout>
 
 
     </LinearLayout>
-
-
 
 
 </LinearLayout>
